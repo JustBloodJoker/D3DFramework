@@ -219,7 +219,7 @@ namespace FD3DW
 		swapChainDesc.SampleDesc.Count = m_uSampleCount = 1;           //MSAA DISABLED
 		swapChainDesc.SampleDesc.Quality = m_uQuality = 0;         //MSAA DISABLED
 		swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
-		SETHWND(swapChainDesc.OutputWindow);
+		swapChainDesc.OutputWindow = GETHWND();
 		swapChainDesc.BufferCount = BUFFERS_COUNT;
 		swapChainDesc.Windowed = !WndSet.FullScreen;
 		swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_DISCARD;
